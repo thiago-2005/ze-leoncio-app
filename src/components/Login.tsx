@@ -1,14 +1,13 @@
-'use client'
-import '@/services/auth'
-import { login } from '@/services/auth'
-import { useRouter } from 'next/navigation'
+"use client";
+import { login } from "@/services/auth";
+import { useRouter } from "next/navigation";
 
-export function Login () {
-  const router = useRouter()
+export function Login() {
+  const router = useRouter();
 
-  async function handleLogin () {
-    await login()
-    router.refresh()
+  async function handleLogin() {
+    await login();
+    router.refresh();
   }
 
   return (
@@ -18,5 +17,5 @@ export function Login () {
     >
       Entrar
     </button>
-  )
+  );
 }
