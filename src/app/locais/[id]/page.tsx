@@ -1,3 +1,4 @@
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,11 +16,9 @@ type LandmarkPage = {
 };
 
 async function getData(id: string): Promise<Landmark> {
-  const res = await fetch(`https://380482-3000.csb.app/api/landmark/${id}`, {
-    cache: "reload",
-  });
+  const res = await axios.get(`/api/landmark/${id}`);
 
-  return res.json();
+  return res.data;
 }
 
 // export async function generateStaticParams() {

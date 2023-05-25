@@ -4,13 +4,12 @@ import { Login } from "@/components/Login";
 import { cookies } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 
 async function getData() {
-  const res = await fetch("https://380482-3000.csb.app/api/landmark", {
-    cache: "no-cache",
-  });
+  const res = await axios.get("/api/landmark");
 
-  return res.json();
+  return res.data;
 }
 
 export default async function Locais() {

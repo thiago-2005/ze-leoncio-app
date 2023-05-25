@@ -34,8 +34,19 @@ export default function Home() {
               <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
                 <p>Conheça mais sobre os edificios hisóricos de Joinville</p>
               </div>
+
+              {/* <Image
+                src="/qrcodeAndroid.png"
+                className="mx-auto"
+                width={300}
+                height={300}
+                alt="code"
+              /> */}
+
               <div className="pt-8 text-base font-semibold leading-7">
-                {/* <p className="text-gray-900">Escaneie o QR Code para baixar o APP Android</p> */}
+                {/* <p className="text-gray-900">
+                  Escaneie o QR Code para baixar o APP Android
+                </p> */}
               </div>
             </div>
           </div>
